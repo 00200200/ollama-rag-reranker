@@ -1,8 +1,4 @@
-## 🐱 Ollama RAG + Reranker (CLI) - CAT FACTS 
-
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
-[![UV](https://img.shields.io/badge/UV-Package%20Manager-green.svg)](https://github.com/astral-sh/uv)
-[![Ollama](https://img.shields.io/badge/Ollama-enabled-1f6feb.svg)](https://ollama.com)
+# Ollama RAG + Reranker (CLI)
 
 Simple Retrieval-Augmented Generation system using:
 
@@ -12,7 +8,7 @@ Simple Retrieval-Augmented Generation system using:
 
 ![RAG Flow](assets/cli.png)
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Install dependencies
@@ -28,14 +24,14 @@ uv run --active python main.py
 # The app builds the index on first run automatically
 ```
 
-## 🧠 How it Works
+## How it Works
 
 - `src/rag/embedding.py`: Embeds text with Ollama.
 - `src/db/db_handler.py`: HNSW index for `TextDoc`, search + convenience helpers.
 - `src/rag/rerank.py`: Lazy-loaded reranker (`BAAI/bge-reranker-base`) to rescore candidates.
 - `src/rag/llm.py`: Generates the final answer from context using an Ollama chat model.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ollama-rag-reranker/
@@ -52,7 +48,7 @@ ollama-rag-reranker/
         └── rerank.py
 ```
 
-## 🖥️ Interactive CLI
+## Interactive CLI
 
 Menu-driven, clean output with colors:
 
@@ -84,14 +80,13 @@ Question: How much time does a cat sleep?
 └────────────────────────────┘
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 Change default models in:
 
 - `src/rag/embedding.py`: `emb_model`
 - `src/rag/llm.py`: `model`, `system_prompt`
 
+## Screenshots
 
-
-## 📸 Screenshots
 ![RAG Flow](assets/answer.png)
